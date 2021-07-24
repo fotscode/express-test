@@ -1,1 +1,6 @@
 node_modules
+
+# handles vim temporary files
+*~
+*.swp
+*.swo
