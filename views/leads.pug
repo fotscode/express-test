@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  for lead in leads
+    p 
+      span #{lead.email}
+      |
+      a(href="/lead/"+lead.id) Details
