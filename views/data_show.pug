@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= title
+  for lead in leads
+    p #{lead.email}
