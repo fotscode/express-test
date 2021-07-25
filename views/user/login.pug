@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 Log in page
+  form(action="/login",method="POST")
+    label(for="email") Email:
+    input(placeholder="Enter an email", required=true, name="email", type="email")
+    label(for="password") Password:
+    input(placeholder="Enter a password", required=true, name="password", type="password")
+    button(type="submit") Log in
+    p
+      | Forgot your password? #[a(href="#") Reset here].
+    p
+      | Don't have an account? #[a(href="/signup") Sign up here].
+
+
