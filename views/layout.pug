@@ -3,5 +3,15 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+  nav
+    if (user)
+      span Hello #{user.email}!
+    ul
+      li
+        a(href="/signup") Sign up
+      li
+        a(href="/login") Login
+      li
+        a(href="/logout") Logout
   body
     block content
