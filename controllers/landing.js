@@ -1,7 +1,7 @@
 const models = require('../models');
 
 exports.get_landing = function(req, res, next) {
-  res.render('landing', { title: 'Express' });
+  res.render('lead/landing', { title: 'Express' });
 }
 
 exports.submit_lead = function(req, res, next) {
@@ -14,7 +14,7 @@ exports.submit_lead = function(req, res, next) {
 
 exports.show_leads = function(req, res, next) {
   return models.Lead.findAll().then(leads=>{
-    res.render('leads',{title:'Lead Table', leads:leads});
+    res.render('lead/leads',{title:'Lead Table', leads:leads});
   });
 }
 
@@ -24,7 +24,7 @@ exports.show_lead = function(req, res, next) {
       id: req.params.lead_id
     }
   }).then(lead=>{
-    res.render('lead',{title:`Email with id ${lead.id}`,lead:lead});
+    res.render('lead/lead',{title:`Email with id ${lead.id}`,lead:lead});
   });
 }
 

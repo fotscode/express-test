@@ -6,4 +6,9 @@ exports.show_signup = function(req,res,next){
   res.render('user/signup',{formData: {}, errors: {} });
 }
 
+exports.login = function(req,res,next){
 
+}
+
+exports.login = function(req,res,next){
+}
