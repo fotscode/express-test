@@ -4,9 +4,13 @@ block content
   h1 Sign up page
   form(action="/signup",method="POST")
     label(for="email") Email:
-    input(placeholder="Enter an email", required=true, name="email", type="email")
+    input(placeholder="Enter an email", required=true, name="email", type="email" value=formData.email)
+    if (errors&&errors.email)
+      p #{errors.email}
     label(for="password") Password:
     input(placeholder="Enter a password", required=true, name="password", type="password")
+    if (errors&&errors.password)
+      p #{errors.password}
     button(type="submit") Sign up
     p
       Already have an account? #[a(href="/login") Log in here]
