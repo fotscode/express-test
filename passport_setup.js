@@ -1,5 +1,5 @@
 
-let localStrategy=require('passport-local').Strategy;
+let LocalStrategy=require('passport-local').Strategy;
 
 let bcrypt = require('bcrypt');
 let models = require('./models');
@@ -25,11 +25,11 @@ module.exports = function(passport){
     });
   });
   passport.use(new LocalStrategy({
-    userNameField:'email',
+    usernameField:'email',
     passwordField:'password',
     passReqToCallback:true
   },
-  (req,email,password,done)=>{
+  function(req,email,password,done){
     return models.User.findOne({
       where: {
         'email':email
