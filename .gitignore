@@ -6,4 +6,4 @@ node_modules
 *.swo
 
 # hides config.json (db data)
-./config/config.json
+config/config.json
